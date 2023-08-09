@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    text-overflow: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(243, 100%, 93%);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    max-width: 60rem;
+}
+
+.item{
+    color: white;
+    margin: 1rem;
+    background-color: #1E2C69;
+    padding: 2.5rem;
+}
+
+#box-1{
+    padding-right: 10rem;
+    border-top-right-radius: 100px;
+}
+
+.three{
+    display: flex;
+    flex-direction: row;
+}
+
+#mid{
+    margin-left: 0px 12px;
+}
+
+.link-icon{
+    padding: 12px;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    margin: 12px;
+}
