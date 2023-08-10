@@ -5,19 +5,21 @@
 }
 
 h1, h2, h3, h4, h5, h6, p{
-    text-overflow: none;
+    text-overflow: break-word;
 }
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: hsl(243, 100%, 93%);
+    background-color: hsl(229, 57%, 11%);
+    font-size: 14px;
 }
 
 .container{
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-items: center;
     max-width: 60rem;
+    
 }
 
 .item{
@@ -28,13 +30,19 @@ body{
 }
 
 #box-1{
-    padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 8rem;
     border-top-right-radius: 100px;
+    height: 12.5rem;
+    max-width: 25rem;
 }
 
 .three{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    gap: 0 1rem;
 }
 
 #mid{
@@ -46,7 +54,33 @@ body{
     background-color: hsl(229, 57%, 11%);
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     border-radius: 10px;
-    margin: 12px;
+    width: 3rem;
+}
+
+#box-2{
+    width: 35rem;
+}
+
+#scroll-bar{
+    height: 15px;
+    border-radius: 25px;
+    background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));    
+    margin: 10px 0px;
+}
+
+.range{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gb{
+    opacity: 0.7;
+}
+
+#used_gb{
+    font-weight: 600;
+    opacity: 1 !important;
+    color: white !important;
 }
