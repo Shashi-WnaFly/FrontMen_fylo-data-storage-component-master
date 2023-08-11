@@ -9,22 +9,30 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Raleway', sans-serif;
     background-color: hsl(229, 57%, 11%);
     font-size: 14px;
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .container{
     display: flex;
     align-items: end;
-    justify-items: center;
-    max-width: 60rem;
-    
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
 }
 
 .item{
     color: white;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     background-color: #1E2C69;
     padding: 2.5rem;
 }
@@ -32,10 +40,7 @@ body{
 #box-1{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-right: 8rem;
-    height: 12.5rem;
-    max-width: 25rem;
     border-radius: 10px 100px 10px 10px;
 }
 
@@ -43,10 +48,11 @@ body{
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 1fr));
     gap: 0 1rem;
+    margin-top: 2rem;
 }
 
 #mid{
-    margin-left: 0px 12px;
+    /* margin-left: 12px; */
 }
 
 .link-icon{
@@ -60,7 +66,11 @@ body{
 }
 
 #box-2{
-    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-self: stretch; */
+    align-self: stretch;
+
     border-radius: 10px;
 }
 
@@ -106,7 +116,31 @@ body{
 }
 
 #used_gb{
-    font-weight: 600;
-    opacity: 1 !important;
-    color: rgb(255, 255, 255) !important;
+    font-weight: 700;
+}
+
+@media (max-width: 576px){
+    body{
+        background: center/contain no-repeat url(./images/bg-mobile.png);
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-items: center;
+    }
+    #box-1{
+        display: flex;
+        margin-top: 20rem;
+        align-self: stretch;
+        flex-basis: 100%;
+
+    }
+    #box-2{
+        margin-bottom: 20rem;
+        align-self: stretch;
+        flex-basis: 100%;
+    }
 }
