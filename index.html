@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  
+
   <title>Frontend Mentor | Fylo data storage component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
+
     <div class="item" id="box-1">
+
       <div class="fylo"><img src="./images/logo.svg" alt=""></div>
-      <div class="three">
-        <div class="link-icon"><img src="./images/icon-document.svg" alt=""></div>
-        <div class="link-icon" id="mid"><img src="./images/icon-folder.svg" alt=""></div>
-        <div class="link-icon"><img src="./images/icon-upload.svg" alt=""></div>
+
+      <div class="icons-3">
+
+        <div class="icons-item"><img src="./images/icon-document.svg" alt=""></div>
+        <div class="icons-item"><img src="./images/icon-folder.svg" alt=""></div>
+        <div class="icons-item"><img src="./images/icon-upload.svg" alt=""></div>
+
       </div>
+
     </div>
 
 
     <div class="item" id="box-2">
-      <div id="white-box"><span id="left">185</span><span id="gb_left">&nbsp;&nbsp;GB LEFT</span></div>
-      <div><span class="gb">You’ve used </span><span id="used_gb">815 GB</span><span class="gb"> of your storage</span></div>
-      <div id="scroll-b">
-        <div id="scroll-o">
-          <div id="scroll-w"></div>
+
+      <div id="white-box"><span id="left-space">185</span><span id="gb_left">&nbsp;&nbsp;GB LEFT</span></div>
+
+      <div><span class="text">You’ve used </span><span id="used_gb">815 GB</span><span class="text"> of your
+          storage</span></div>
+
+      <div id="scroll-blue">
+        <div id="scroll-orange">
+          <div id="scroll-white"></div>
         </div>
       </div>
+
       <div class="range">
+
         <div>0 GB</div>
         <div>1000 GB</div>
+
       </div>
 
     </div>
   </div>
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+
 </body>
+
 </html>
