@@ -66,9 +66,9 @@ body{
 }
 
 #box-2{
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-self: stretch; */
     align-self: stretch;
 
     border-radius: 10px;
@@ -106,6 +106,29 @@ body{
     right: 1px;
 }
 
+#left{
+    font-weight: 700;
+    font-size: 45px;
+    color: black;
+}
+
+#white-box{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 2;
+}
+
+#gb_left{
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
 .range{
     display: flex;
     justify-content: space-between;
@@ -121,7 +144,7 @@ body{
 
 @media (max-width: 576px){
     body{
-        background: center/contain no-repeat url(./images/bg-mobile.png);
+        background: center/contain no-repeat invert url(./images/bg-mobile.png);
         background-size: cover;
     }
     .container{
@@ -142,5 +165,11 @@ body{
         margin-bottom: 20rem;
         align-self: stretch;
         flex-basis: 100%;
+    }
+    #white-box{
+        max-width: 85%;
+        top: 130px;
+        left: 4rem;
+        right: 4rem;
     }
 }
