@@ -4,7 +4,7 @@
     --light-blue: #dddbff;
     --gray-blue: #848794;
     --primary-blue: #1d2c67;
-    --danger-blue: 	#0c122c;
+    --danger-blue: #0c122c;
 
         /* gradient color */
     --soft-red: #ffa399;
@@ -28,7 +28,6 @@ h6,
 p {
     text-overflow: break-word;
 }
-
 
 body {
     display: flex;
