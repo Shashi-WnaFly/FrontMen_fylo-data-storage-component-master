@@ -1,14 +1,36 @@
-*{
+        
+        /* Project color */
+:root{
+    --light-blue: #dddbff;
+    --gray-blue: #848794;
+    --primary-blue: #1d2c67;
+    --danger-blue: 	#0c122c;
+
+        /* gradient color */
+    --soft-red: #ffa399;
+    --hot-pink: #ff4d97;
+}
+
+
+        /* css resetting  */
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     text-overflow: break-word;
 }
 
-body{
+
+body {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
@@ -21,21 +43,21 @@ body{
     width: 100vw;
 }
 
-.container{
+.container {    /* big box containing two boxes */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
 }
 
-.item{
-    color: white;
+.item {
+    color: #ffffff;
     margin: 0.5rem 1rem;
     background-color: #1E2C69;
     padding: 2.5rem;
 }
 
-#box-1{
+#box-1 {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -45,16 +67,16 @@ body{
     min-width: 15rem;
 }
 
-.icons-3{
+.icons-3 {      /* contain three icons file folder upload */
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 1fr));
     gap: 0 1rem;
     margin-top: 2rem;
 }
 
-.icons-item{
+.icons-item {
     padding: 12px;
-    background-color: hsl(229, 57%, 11%);
+    background-color: var(--danger-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,40 +84,38 @@ body{
     width: 3rem;
 }
 
-#box-2{
+#box-2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
     border-radius: 10px;
     align-self: flex-end;
     width: 60%;
-    min-width: 20rem;
+    min-width: 17rem;
 }
 
-#scroll-blue{
+#scroll-blue {
     display: flex;
     height: 15px;
     border-radius: 25px;
-    background-color: hsl(229, 57%, 11%);
+    background-color: var(--danger-blue);
     margin: 10px 0px;
     margin-top: 20px;
-    z-index: 0;
     border: none;
 }
 
-#scroll-orange{
+#scroll-orange {
     display: flex;
     position: relative;
     width: 75%;
     border-radius: 25px;
-    background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));    
+    background-image: linear-gradient(to right, var(--soft-red), var(--hot-pink));
     z-index: 1;
     border: none;
     align-items: center;
 }
 
-#scroll-white{
+#scroll-white {
     position: absolute;
     width: 11px;
     height: 11px;
@@ -105,71 +125,97 @@ body{
     right: 1px;
 }
 
-#left-space{
+#white-box {    /* message-box */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px 10px 0px 10px;
+    background-color: white;
+    z-index: 2;
+}
+
+#left-space {
     font-weight: 700;
     font-size: 45px;
     color: black;
 }
 
-#white-box{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: white;
-    z-index: 2;
-}
-
-#gb_left{
+#gb_left {
     color: hsl(229, 7%, 55%);
     font-weight: 700;
     opacity: 0.8;
 }
 
-.range{
+.range {
     display: flex;
     justify-content: space-between;
+    color: var(--light-blue);
 }
 
-.text{
-    opacity: 0.7;
+.text {
+    color: var(--light-blue);
 }
 
-#used_gb{
+#used_gb {
     font-weight: 700;
 }
 
-@media (max-width: 576px){
-    body{
+@media (min-width: 577px) {     /* css for message box positioning and edgy corner. */
+
+    .arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid #ffffff;
+        border-left: 30px solid transparent;
+        z-index: 2;
+        top: 17px;
+        right: 40px;
+    }
+
+    #white-box {
+        top: -50px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 576px) {     /* css for mobile appearance */
+    body {
         background: center/contain no-repeat url(./images/bg-mobile.png);
         background-size: cover;
     }
-    .container{
+
+    .container {
         flex-direction: column;
         width: 100vw;
         height: 100vh;
         align-items: center;
         justify-items: center;
     }
-    #box-1{
+
+    #box-1 {
         display: flex;
         align-self: stretch;
         width: 90%;
         margin: 20rem auto 0.5rem;
     }
-    #box-2{
+
+    #box-2 {
         margin-bottom: 20rem;
         align-self: stretch;
         width: 90%;
         margin: 0.5rem auto 20rem;
     }
-    #white-box{
+
+    #white-box {
+        position: absolute;
         max-width: 85%;
         top: 130px;
         left: 4rem;
         right: 4rem;
+        border-bottom-right-radius: 10px;
     }
 
 }
